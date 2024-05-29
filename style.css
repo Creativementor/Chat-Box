@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #000000, #17522f);
+    width: 100%;
+    height: 100vh;
+}
+
+.top_container {
+    width: 100%;
+    height: 12%;
+    background: #000000;
+}
+
+p {
+    padding-top: 12px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 30px;
+}
+
+.chatBox {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding-left: 30px;
+    font-size: 20px;
+    width: 93%;
+    height: 50px;
+    background: linear-gradient(65deg, #5a5757, #ffffff);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+button {
+    padding-left: 20px;
+    color: #ffffff;
+    width: 2.5%;
+    height: 40px;
+    font-size: 40px;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.empty_container {
+    width: 100%;
+    height: 80vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none
+}
