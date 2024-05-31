@@ -18,21 +18,21 @@ function autoscroll() {
 }
 
 
-function sendmessage() {
-    if (input.value.trim() === "") {
+function sendMessage() {
+    if (textBox.value.trim() === "") {
         return;
     }
-    const userInput = input.value;
-    messages.innerHTML += `<li class="user-message">${input.value}</li>`;
-    autoScroll();
+    const userInput = textBox.value;
+    messages.innerHTML += `<li class="user-message">${textBox.value}</li>`;
+    autoscroll();
     setTimeout(() => {
         reply(userInput);
-        autoScroll();
+        autoscroll();
     }, 1000);
-    input.value = "";
+    textBox.value = "";
 }
 
-button.addEventListener("click", sendmessage());
+sendBtn.addEventListener("click", sendMessage);
 
 
 
@@ -41,15 +41,15 @@ function reply(userInput) {
     user = user.toLowerCase();
     user = user.replace(/\s+/g, "");
     console.log(user);
-    if (user == "hello" || user == "hi") {
+    if (user == "Hi!" || user == "hello" || user == "hi") {
         messages.innerHTML += `<li class="bot">Hello! How are you</li>`;
-    } else if (user == "salam" || user == "assalamualikum" || user == "Assalam-u-alaikum") {
+    } else if (user == "Salam" || user == "salam" || user == "assalamualikum" || user == "Assalam-u-alaikum") {
         messages.innerHTML += `<li class="bot">Walikum_Salam! kia Haal hai aap kai janab</li>`;
     } else if (user == "I amfine" || user == "i am fine" || user == "i am good" || user == "I am good") {
         messages.innerHTML += `<li class="bot">Ohh great What's your Name?</li>`;
     } else if (
-        user == "maitheek" ||
-        user == "maibilkultheek" ||
+        user == "mai theek" ||
+        user == "mai bilkul theek" ||
         user == "theek" ||
         user == "mein thk hun" ||
         user == "me thik hun"
@@ -63,11 +63,7 @@ function reply(userInput) {
         user == "fareed" ||
         user == "Aqib"
     ) {
-        messages.innerHTML += `<li class="bot">Beautiful Name! what is your Age? </li>`;
-    } else if (user > 0 && user < 18) {
-        messages.innerHTML += `<li class="bot">you are a child </li>`;
-    } else if (user >= 18) {
-        messages.innerHTML += `<li class="bot">Buhot bare hogae ho beta</li>`;
+        messages.innerHTML += `<li class="bot">Beautiful Name!</li>`;
     } else {
         const dummy = [
             {
@@ -83,7 +79,7 @@ function reply(userInput) {
             {
                 id: "bot",
                 message: "hi",
-            }
+            },
 
             {
                 id: "bot",
@@ -110,10 +106,9 @@ function reply(userInput) {
                 message: "ok bye buht kaam mujhe tm bh kch kaam krlo",
             },
         ]
+        let random = Math.round(Math.random() * dummy.length);
 
-        const newMessage = Math.round(Math.random() * dummyText.lenght);
-        console.log(dummyText[newMessage], "newMessage");
-        messages.innerHTML += `<li>   ${dummyText[newMessage].message}   </li>`;
+        messages.innerHTML += `<li class=${dummy[random].id}>${dummy[random].message}</li>`;
     }
 
 }
