@@ -44,8 +44,8 @@ function reply(userInput) {
     if (user == "Hi!" || user == "hello" || user == "hi") {
         messages.innerHTML += `<li class="bot">Hello! How are you</li>`;
     } else if (user == "Salam" || user == "salam" || user == "assalamualikum" || user == "Assalam-u-alaikum") {
-        messages.innerHTML += `<li class="bot">Walikum_Salam! kia Haal hai aap kai janab</li>`;
-    } else if (user == "I amfine" || user == "i am fine" || user == "i am good" || user == "I am good") {
+        messages.innerHTML += `<li class="bot">Walaikum_Salam! kia Haal hai aap kai janab</li>`;
+    } else if (user == "I am fine" || user == "i am fine" || user == "i am good" || user == "I am good") {
         messages.innerHTML += `<li class="bot">Ohh great What's your Name?</li>`;
     } else if (
         user == "mai theek" ||
@@ -56,14 +56,15 @@ function reply(userInput) {
     ) {
         messages.innerHTML += `<li class="bot">achaa hai aap ka name kia hai janab</li>`;
     } else if (
-        user == "Hasan" ||
+        user == "hasan" ||
+        user == "hassan" ||
         user == "umer" ||
         user == "wasi" ||
         user == "hasnain" ||
         user == "fareed" ||
         user == "Aqib"
     ) {
-        messages.innerHTML += `<li class="bot">Beautiful Name!</li>`;
+        messages.innerHTML += `<li class="bot">Nice Name!</li>`;
     } else {
         const dummy = [
             {

@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #000000, #17522f);
+    background: linear-gradient(45deg, #f5d5d5, #1e4d83);
     width: 100%;
     height: 100vh;
 }
@@ -13,7 +13,7 @@ body {
 .top_container {
     width: 100%;
     height: 12%;
-    background: #000000;
+    background: transparent;
 }
 
 p {
@@ -44,7 +44,9 @@ input {
     font-size: 20px;
     width: 93%;
     height: 50px;
-    background: linear-gradient(65deg, #5a5757, #ffffff);
+    font-weight: lighter;
+    background: #000000;
+    color: #ffffff;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -52,7 +54,7 @@ input {
 
 button {
     padding-left: 20px;
-    color: #ffffff;
+    color: #185aa5;
     width: 2.5%;
     height: 40px;
     font-size: 40px;
@@ -62,8 +64,13 @@ button {
     cursor: pointer;
 }
 
+.chats {
+    row-gap: 50px;
+}
+
 li {
-    width: 45%;
+    display: inline-block;    
+    /* width: 30%; */
     padding: 15px;
     margin: 5px 10px;
     list-style-type: none;
@@ -72,23 +79,27 @@ li {
 .bot {
     list-style-type: none;
     text-align: left;
-    margin-left: 0;
-    background-color: rgb(177, 177, 177);
-    border-radius: 15px 15px 15px 0px;
+    /* margin-left: 0; */
+    background-color: rgb(87, 85, 85);
+    /* border-top-left-radius: 0 10px; */
+    border-top-right-radius: 20px 20px;
+    border-bottom-left-radius: 20px 20px;
+    /* border-top-right-radius: 20px 20px; */
     color: #000000;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     word-wrap: break-word;
 }
 
 .user-message {
     list-style: none;
-    text-align: left;
-    margin-left: auto;
-    margin-right: 0;
+    text-align: right;
+    /* margin-left: auto; */
+    /* margin-right: 0; */
     background-color: #000000;
-    border-radius: 30px;
+    border-top-right-radius: 20px 20px;
+    border-bottom-left-radius: 20px 20px;
     color: #ffffff;
     font-size: 20px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     word-wrap: break-word;
 }
